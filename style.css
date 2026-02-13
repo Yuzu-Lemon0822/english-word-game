@@ -24,15 +24,27 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   font-size: 40px;
-  border-bottom: 3px solid #444;
   padding: 5px 20px;
   min-width: 300px;
 }
 
-#result {
-  position: absolute;
-  top: 60vh;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 32px;
+.correct {
+  color: #2ecc71;
+}
+
+.wrong {
+  color: #e74c3c;
+}
+
+@keyframes shake {
+  0% { transform: translateX(-50%) translateX(0); }
+  20% { transform: translateX(-50%) translateX(-10px); }
+  40% { transform: translateX(-50%) translateX(10px); }
+  60% { transform: translateX(-50%) translateX(-8px); }
+  80% { transform: translateX(-50%) translateX(8px); }
+  100% { transform: translateX(-50%) translateX(0); }
+}
+
+.shake {
+  animation: shake 0.4s ease;
 }
