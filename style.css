@@ -1,0 +1,33 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #f5f7fb;
+  font-family: "Segoe UI", "Hiragino Sans", sans-serif;
+}
+
+#ui {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+#question {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#answer {
+  font-size: 40px;
+  border-bottom: 3px solid #444;
+  padding: 5px 20px;
+  min-width: 300px;
+}
+
+#result {
+  font-size: 32px;
+}
