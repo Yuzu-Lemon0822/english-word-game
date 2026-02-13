@@ -7,7 +7,6 @@ let answer = ""
 
 function next() {
   current = words[Math.floor(Math.random() * words.length)]
-  answer = ""
 }
 
 export function main() {
@@ -25,6 +24,10 @@ export function main() {
         } else {
           drawResult(`❌ ${current.EN}`);
         }
+        answer = ""
+        setTimeout(() => {
+          drawResult("")
+        }, 800)
       }
       key[k] = false
     }
