@@ -1,4 +1,3 @@
-import { ctx } from "../main.js"
 import { key } from "./input.js"
 import { words } from "./data.js"
 import { drawQuestion, drawAnswer } from "./display.js"
@@ -12,8 +11,6 @@ function next() {
 }
 
 export function main() {
-  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-
   if (!current) next()
 
   // 入力処理
