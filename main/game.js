@@ -18,7 +18,16 @@ export function main() {
       if (k.length === 1) answer += k
       if (k === "Backspace") answer = answer.slice(0, -1)
       if (k === "Enter") {
-        if (answer === current.EN) {
+        if (answer === "/next") {
+          answerEl.classList.remove("correct");
+          answerEl.classList.add("wrong", "shake");
+          answer = current.EN
+          setTimeout(() => {
+            answerEl.classList.remove("wrong", "shake");
+            next()
+            answer = "";
+          }, 800);
+        } else if (answer === current.EN) {
           answerEl.classList.remove("wrong", "shake");
           answerEl.classList.add("correct");
 
@@ -26,8 +35,7 @@ export function main() {
             answerEl.classList.remove("correct");
             next();
             answer = "";
-          }, 600);
-
+          }, 800);
         } else {
           answerEl.classList.remove("correct");
           answerEl.classList.add("wrong", "shake");
