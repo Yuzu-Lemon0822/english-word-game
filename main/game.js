@@ -1,7 +1,7 @@
 import { ctx } from "../main.js"
 import { key } from "./input.js"
 import { words } from "./data.js"
-import { drawText } from "./display.js"
+import { drawQuestion, drawAnswer } from "./display.js"
 
 let current = null
 let answer = ""
@@ -31,6 +31,6 @@ export function main() {
     }
   }
 
-  drawText(`${current.JP} <${current.type}>`, 100, 100)
-  drawText(answer, 100, 150)
+  drawQuestion(`${current.JP} <${current.type}>`)
+  drawAnswer(answer)
 }
