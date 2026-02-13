@@ -26,6 +26,7 @@ html, body {
   margin: auto;
   width: 300px;
   text-align: center;
+  font-size: 40px;
 }
 
 .correct {
