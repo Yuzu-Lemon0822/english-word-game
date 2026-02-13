@@ -25,6 +25,7 @@ export function main() {
           setTimeout(() => {
             answerEl.classList.remove("correct");
             next();
+            answer = "";
           }, 600);
 
         } else {
@@ -33,6 +34,7 @@ export function main() {
 
           setTimeout(() => {
             answerEl.classList.remove("wrong", "shake");
+            answer = "";
           }, 400);
         }
       }
