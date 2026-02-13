@@ -1,29 +1,28 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   background: #f5f7fb;
   font-family: "Segoe UI", "Hiragino Sans", sans-serif;
 }
 
 #ui {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
+  position: relative;   /* ← 基準にする */
+  height: 100vh;
 }
 
 #question {
+  position: absolute;
   top: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 48px;
-  font-weight: bold;
 }
 
 #answer {
+  position: absolute;
   top: 45vh;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 40px;
   border-bottom: 3px solid #444;
   padding: 5px 20px;
@@ -31,6 +30,9 @@ html, body {
 }
 
 #result {
+  position: absolute;
   top: 60vh;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 32px;
 }
