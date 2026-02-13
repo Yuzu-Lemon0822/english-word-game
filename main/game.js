@@ -20,10 +20,10 @@ export function main() {
       if (k === "Enter") {
         if (answer === "/next") {
           answerEl.classList.remove("correct");
-          answerEl.classList.add("wrong", "shake");
+          answerEl.classList.add("wrong");
           answer = current.EN
           setTimeout(() => {
-            answerEl.classList.remove("wrong", "shake");
+            answerEl.classList.remove("wrong");
             next()
             answer = "";
           }, 800);
