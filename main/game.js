@@ -1,6 +1,6 @@
 import { key } from "./input.js"
 import { words } from "./data.js"
-import { drawQuestion, drawAnswer } from "./display.js"
+import { drawQuestion, drawAnswer, drawResult } from "./display.js"
 
 let current = null
 let answer = ""
@@ -20,9 +20,11 @@ export function main() {
       if (k === "Backspace") answer = answer.slice(0, -1)
       if (k === "Enter") {
         if (answer === current.EN) {
-          next()
+          drawResult("✅ Correct!");
+          next();
+        } else {
+          drawResult(`❌ ${current.EN}`);
         }
-        answer = ""
       }
       key[k] = false
     }
